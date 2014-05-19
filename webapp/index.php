@@ -90,7 +90,7 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
       
       <div id="listPanel" class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-spin fa-gear"></i>&nbsp; Memeriksa IP tetangga..</h3>
+          <h3 class="panel-title"><i class="fa fa-gear"></i>&nbsp; Memeriksa IP tetangga..</h3>
         </div>
         <div class="panel-body">
             <div id="listDiv">

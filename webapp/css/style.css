@@ -83,3 +83,6 @@ input[type="radio"] {
   margin-top: -40px;
   font-style: italic;
 }
+.btn {
+  margin-bottom: 5px;
+}
