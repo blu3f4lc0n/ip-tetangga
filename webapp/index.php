@@ -80,6 +80,12 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
         <p>
           <input id="kissurl" type="text" class="form-control" placeholder="123.456.789.10" value="<?=$ipmu[0]?>" disabled>
         </p>
+        <p>
+          <div>
+            <input id="identifikasi" type="checkbox" />
+            <label for="identifikasi">Identifikasi layanan / services di tiap alamat IP (fitur beta, waktu cek akan sedikit lebih lama).</label>
+          </div>
+        </p>
         <!-- <p class="pull-left nb">
           * Alamat IP yang tertulis di atas adalah alamat IP publik Anda
         </p> -->
@@ -90,12 +96,14 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
       
       <div id="listPanel" class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-gear"></i>&nbsp; Memeriksa IP tetangga..</h3>
+          <h3 class="panel-title"><i class="fa fa-gear"></i>&nbsp; Menampilkan IP tetangga yang online..</h3>
         </div>
         <div class="panel-body">
+            <!-- <div id="listDiv">
+            </div> -->
             <div id="listDiv">
             </div>
-            <span id="wait"><i class="fa fa-spin fa-spinner"></i>&nbsp; Sedang bekerja, proses tidak akan memakan waktu lebih dari 30 detik :)</span>
+            <span id="wait"><i class="fa fa-spin fa-spinner"></i>&nbsp; Sedang bekerja..<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proses tidak akan memakan waktu lebih dari 20 detik, atau hingga 1 menit ketika identifikasi layanan diaktifkan :)</span>
         </div>
       </div>
 

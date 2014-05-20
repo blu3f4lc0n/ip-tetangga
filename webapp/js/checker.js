@@ -55,6 +55,11 @@ $(document).ready(function() {
       var ipnya = $('#kissurl').val();
       if (ipnya !== "") {
         if (ValidateIPaddress(ipnya)) {
+          if ($('#identifikasi').prop('checked')) {
+            var identify = "1";
+          } else {
+            var identify = "0";
+          }
           $('#kissurl').css({
             color: '#3498DB'
             // color: '#007FFF'
@@ -66,11 +71,10 @@ $(document).ready(function() {
           $('#listPanel').slideUp('400').slideDown('400');
           $('#wait').fadeIn(400);
 
-
           $.ajax({
             url: 'checker.php?goji=geje',
             type: 'get',
-            data: 'do=' + ipnya,
+            data: 'do=' + ipnya + '&id=' + identify,
             success: function(datanya) {
 
               if (datanya == "ok") {
