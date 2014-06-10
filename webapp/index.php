@@ -1,4 +1,4 @@
-<!-- v0.1 beta @ 2014/05/18 04:02 WIB -->
+<!-- v0.2 beta @ 2014/06/10 20:58 WIB -->
 <?php 
 // MINIFY HTML
 function sanitize_output($buffer)
@@ -52,7 +52,7 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
     <link href="css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="/favicon.png" rel="shortcut icon" />
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -72,7 +72,7 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
           </p>
         </div>
       </div>
-
+      
       <div id="divgrab" class="jumbotron">
         <p class="lead">
           IP publik Anda:
@@ -80,12 +80,12 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
         <p>
           <input id="kissurl" type="text" class="form-control" placeholder="123.456.789.10" value="<?=$ipmu[0]?>" disabled>
         </p>
-        <p>
+        <!-- <p>
           <div>
             <input id="identifikasi" type="checkbox" />
             <label for="identifikasi">Identifikasi layanan / services di tiap alamat IP (fitur beta, waktu cek akan sedikit lebih lama).</label>
           </div>
-        </p>
+        </p> -->
         <!-- <p class="pull-left nb">
           * Alamat IP yang tertulis di atas adalah alamat IP publik Anda
         </p> -->
@@ -103,7 +103,7 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
             </div> -->
             <div id="listDiv">
             </div>
-            <span id="wait"><i class="fa fa-spin fa-spinner"></i>&nbsp; Sedang bekerja..<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proses tidak akan memakan waktu lebih dari 20 detik, atau hingga 1 menit ketika identifikasi layanan diaktifkan :)</span>
+            <span id="wait"><i class="fa fa-spin fa-spinner"></i>&nbsp; Sedang bekerja..<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proses tidak akan memakan waktu lebih dari 20 detik<!--, atau hingga 1 menit ketika identifikasi layanan diaktifkan--> :)</span>
         </div>
       </div>
 
@@ -117,11 +117,11 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
       </div>
 
       <div class="footer">
-        <p>( made by @gojigeje ~ v0.1-beta )</p>
+        <p>( made by <a href="http://twitter.com/gojigeje" target="_blank">@gojigeje</a> ~ v0.2-beta )</p>
       </div>
 
     </div> <!-- /container -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="js/checker.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="js/checker.min.js" type="text/javascript" charset="utf-8" async defer></script>
   </body>
 </html>

@@ -20,7 +20,8 @@ sort_ip() {
 }
 
 linkify() {
-  cat "$dofile" | sed 's/^/<div class="col-xs-6 col-sm-4 col-md-3"><a class="btn btn-primary btn-block" href="http:\/\//g' | sed 's/$/\/" target="_blank">/g' > "$dofile.url"
+  cat "$dofile" | sed -s 's/^/<div class="col-xs-6 col-sm-4 col-md-3"><a oncontextmenu="speedyml('\''/g;s/$/'\''/g;s/$/)" class="btn btn-primary btn-block" href="http:\/\//g' > "$dofile.1"
+  paste "$dofile.1" "$dofile" | tr -d "\t" | sed 's/$/\/" target="_blank">/g' > "$dofile.url"
 }
 
 combine() {

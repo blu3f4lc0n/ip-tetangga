@@ -97,6 +97,10 @@ $(document).ready(function() {
     }
   });
 
+  $('#listPanel').bind("contextmenu",function(e){
+    e.preventDefault();
+  });
+
 });
 
 
@@ -142,4 +146,12 @@ function loadResult(a) {
 
     }
   });
+}
+
+function speedyml(a) {
+  if(event.button==2)
+   {
+     window.open("http://speedy.ml/?ip="+a);
+     return false;    
+   }
 }
