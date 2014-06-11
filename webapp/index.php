@@ -1,4 +1,4 @@
-<!-- v0.2 beta @ 2014/06/10 20:58 WIB -->
+<!-- v0.3 beta @ 2014/06/11 06:46 WIB -->
 <?php 
 // MINIFY HTML
 function sanitize_output($buffer)
@@ -56,6 +56,26 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
   </head>
 
   <body>
+    <div class="modal" id="modalPopup">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Perbolehkan Pop-Up untuk speedy.ml</h4>
+          </div>
+          <div class="modal-body">
+            <p>Sepertinya browser telah memblokir pop-up untuk sistus ini. Perbolehkan pop-up di pengaturan browser agar bisa menggunakan fitur ini.</p>
+            <p>NB: Pop-up di situs ini bukanlah spam atau iklan, dijamin :)</p>
+            <p>
+              <img class="img-responsive center-block" src="popup.jpg" alt="popup.jpg">
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Oke, Saya Mengerti</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container">
       <div class="header">
@@ -117,11 +137,12 @@ $prefix = implode(".", array_slice(explode(".", $ipmu[0]), 0, 3));
       </div>
 
       <div class="footer">
-        <p>( made by <a href="http://twitter.com/gojigeje" target="_blank">@gojigeje</a> ~ v0.2-beta )</p>
+        <p>( made by <a href="http://twitter.com/gojigeje" target="_blank">@gojigeje</a> ~ v0.3-beta )</p>
       </div>
 
     </div> <!-- /container -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="js/checker.min.js" type="text/javascript" charset="utf-8" async defer></script>
   </body>
 </html>
