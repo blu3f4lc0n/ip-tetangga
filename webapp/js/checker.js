@@ -150,8 +150,13 @@ function loadResult(a) {
 
 function speedyml(a) {
   if(event.button==2)
-   {
-     window.open("http://speedy.ml/?ip="+a);
-     return false;    
-   }
+  {
+    var win = window.open("http://speedy.ml/?ip="+a);
+    if (win) {
+      win.focus();
+    } else {
+      $('#modalPopup').modal('show');
+    }
+    return false;    
+  }
 }
