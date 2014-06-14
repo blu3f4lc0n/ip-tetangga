@@ -6,8 +6,8 @@ dofile="do/$1"
 donefile="done/$1"
 
 mkdir -p "do" "done"
-rm do/* > /dev/null 2>&1
-rm done/* > /dev/null 2>&1
+# rm do/* > /dev/null 2>&1
+# rm done/* > /dev/null 2>&1
 
 echo "" > "do/index.html"
 echo "" > "done/index.html"
